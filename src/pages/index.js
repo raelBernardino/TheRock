@@ -3,7 +3,15 @@ import styled from 'styled-components'
 
 import '../styles/main.scss'
 import '../styles/nav.scss'
-import { Nav, NavScreen, Landing, About, Coffee } from '../components'
+import {
+  Nav,
+  NavScreen,
+  Landing,
+  About,
+  Coffee,
+  Newsletter,
+  Footer
+} from '../components'
 
 const Container = styled.div`
   width: 100%;
@@ -69,6 +77,8 @@ export default () => {
       <Landing />
       <About />
       <Coffee />
+      <Newsletter />
+      <Footer />
     </Container>
   )
 }

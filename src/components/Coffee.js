@@ -12,7 +12,7 @@ export default () => {
         <h1 className="coffee-component-header">THROUGH COFFEE</h1>
         <ButtonBlue>
           OUR COFFEE
-          <ButtonHoverBlue className="about-button__hover" />
+          <ButtonHoverBlue />
         </ButtonBlue>
       </div>
     </div>
