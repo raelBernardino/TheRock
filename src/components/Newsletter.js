@@ -96,7 +96,6 @@ export default () => {
         </form>
         <ButtonBlue onClick={validation}>
           SUBSCRIBE
-          <ButtonHoverBlue />
         </ButtonBlue>
       </div>
     </div>
