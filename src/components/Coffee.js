@@ -12,7 +12,6 @@ export default () => {
         <h1 className="coffee-component-header">THROUGH COFFEE</h1>
         <ButtonBlue>
           OUR COFFEE
-          <ButtonHoverBlue />
         </ButtonBlue>
       </div>
     </div>
