@@ -1,9 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 import '../styles/nav.scss'
+import logo from '../assets/rocklogo.png'
 
 const NavContainer = styled.div`
   width: 100%;
@@ -27,7 +29,9 @@ export default ({
 
   return (
     <NavContainer>
-      <div className="nav" />
+      <Link to="/#landing">
+        <img src={logo} className="nav" alt="" />
+      </Link>
       <FontAwesomeIcon
         className="nav-button"
         icon={faBars}

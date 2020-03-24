@@ -1,12 +1,13 @@
 import React from 'react'
 import '../styles/landing.scss'
+import logo from '../assets/rocklogo.png'
 
 export default () => {
   return (
-    <div className="landing">
+    <div id="landing" className="landing">
       <div className="landing-overlay" />
       <div className="landing-content-container">
-        <div className="landing-logo"/>
+        <img src={logo} className="landing-logo"/>
         <h1 className="landing-header">THE ROCK</h1>
         <h1 className="landing-header__smaller">COMMUNITY CENTER</h1>
         <span className="landing-text">A place of hope & faithfulness.</span>

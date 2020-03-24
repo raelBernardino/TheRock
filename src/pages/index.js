@@ -12,6 +12,12 @@ import {
   Newsletter,
   Footer
 } from '../components'
+if (typeof window !== "undefined") {
+  require("smooth-scroll")('a[href*="#"]', {
+    speed: 1000,
+    speedAsDuration: true
+  })
+}
 
 const Container = styled.div`
   width: 100%;
