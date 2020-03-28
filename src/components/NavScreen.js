@@ -20,7 +20,7 @@ export default ({ navIsOpen, toggleNav }) => {
         <Link
           className="nav-menu-link"
           activeClassName="nav-menu-link__active"
-          to="/">
+        to="/">
             HOME
         </Link>
         <span className="nav-menu-link">OUR STORY</span>

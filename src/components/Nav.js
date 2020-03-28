@@ -35,7 +35,7 @@ export default ({
       <FontAwesomeIcon
         className="nav-button"
         icon={faBars}
-        color="#a2c9db"
+        color="#042033"
         onClick={toggleNav}
       />
     </NavContainer>

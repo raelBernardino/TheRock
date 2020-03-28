@@ -18,6 +18,15 @@ export default () => {
       <NavScreen navIsOpen={navIsOpen} toggleNav={toggleNav} />
       <div className="coffee-landing-image" />
       <CoffeeContent />
+      <div className="coffee-hours">
+        <h1 className="coffee-hours__header">
+          HOURS OF OPERATION
+        </h1>
+        <span>Weekdays 7AM - 7PM</span>
+        <span>Sat 7AM - 7PM</span>
+        <span>Sun 12PM - 4PM</span>
+        <span>4808 Townsend Ave, Los Angeles, CA 90041</span>
+      </div>
       <Newsletter />
       <Footer />
     </Container>
