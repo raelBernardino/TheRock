@@ -1,6 +1,7 @@
 import React from 'react'
-import '../styles/coffee.scss'
+import { Link } from 'gatsby'
 
+import '../styles/coffee.scss'
 import { ButtonBlue, ButtonHoverBlue } from '../pages'
 
 export default () => {
@@ -10,9 +11,12 @@ export default () => {
       <div className="coffee-component-container">
         <h1 className="coffee-component-header">CONNECTING THE COMMUNITY</h1>
         <h1 className="coffee-component-header">THROUGH COFFEE</h1>
-        <ButtonBlue>
-          OUR COFFEE
+        <Link className="button-nav"
+        to="/coffee/">
+          <ButtonBlue>
+            OUR COFFEE
         </ButtonBlue>
+        </Link>
       </div>
     </div>
   )
