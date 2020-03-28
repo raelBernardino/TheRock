@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
@@ -16,9 +17,19 @@ export default ({ navIsOpen, toggleNav }) => {
         onClick={toggleNav}
       />
       <div className="nav-menu">
-        <span className="nav-menu-link">HOME</span>
+        <Link
+          className="nav-menu-link"
+          activeClassName="nav-menu-link__active"
+          to="/">
+            HOME
+        </Link>
         <span className="nav-menu-link">OUR STORY</span>
-        <span className="nav-menu-link">OUR COFFEE</span>
+        <Link
+          className="nav-menu-link"
+          activeClassName="nav-menu-link__active"
+          to="/coffee">
+          OUR COFFEE
+          </Link>
         <span className="nav-menu-link">EVENTS & PROGRAMS</span>
         <span className="nav-menu-link">CONTACT & LOCATION</span>
       </div>

@@ -43,10 +43,15 @@
       width: 100%;
       border-bottom: 1px solid white;
       transition: 0.3s;
+      text-decoration: none;
       &:hover,
       &:active {
         transition: 0.3s;
         font-size: 27px;
+      }
+      &__active {
+        color: #FFF6CC;
+        border-bottom: 1px solid #FFF6CC;
       }
     }
   }
