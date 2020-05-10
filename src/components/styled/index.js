@@ -17,6 +17,13 @@ export const ComponentContainer = styled.div`
   flex-direction: column;
 `
 
+export const BasicContentImage = styled.div`
+  width: 100%;
+  height: 200px;
+  border: solid black .5px;
+  margin: 25px 0 0 0;
+`
+
 export const CenteredFilledImage = styled.div`
   width: 100%;
   height: 100vh;
@@ -28,6 +35,10 @@ export const CenteredFilledImage = styled.div`
   position: relative;
 `
 
+export const CenteredPartiallyFilledImage = styled(CenteredFilledImage)`
+  height: 65vh;
+`
+
 export const BasicOverlay = styled.div`
   width: 100%;
   height: 100%;
@@ -35,7 +46,7 @@ export const BasicOverlay = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(250, 250, 250, .15);
   position: absolute;
   font-family: 'Roboto Condensed';
   padding: 20px;
@@ -56,7 +67,7 @@ export const HeaderLandingTextBigOne = styled.h1`
 export const HeaderLandingTextBigTwo = styled.h1`
   margin: 0;
   font-weight: 900;
-  font-size: 45px;
+  font-size: 40px;
   color: white;
 `
 
@@ -71,7 +82,16 @@ export const HeaderLandingTextBigThree = styled.h1`
   color: white;
 `
 
-export const LightLandingTextBigTwo = styled(HeaderLandingTextBigThree)`
+export const HeaderLandingTextBigThreeNavy = styled(HeaderLandingTextBigThree)`
+  margin-bottom: 10px;
+  color: #042033;
+`
+
+export const LightLandingTextBigOne = styled(HeaderLandingTextBigOne)`
+  font-weight: 300;
+`
+
+export const LightLandingTextBigTwo = styled(HeaderLandingTextBigTwo)`
   margin: 0;
   font-weight: 300;
   color: white;

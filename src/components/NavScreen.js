@@ -20,24 +20,27 @@ export default ({ navIsOpen, toggleNav }) => {
         <Link
           className="nav-menu-link"
           activeClassName="nav-menu-link__active"
-        to="/">
-            HOME
+          to="/">
+          HOME
         </Link>
         <Link
           className="nav-menu-link"
           activeClassName="nav-menu-link__active"
-        to="/about">
-            OUR STORY
+          to="/about">
+          OUR STORY
         </Link>
-        <span className="nav-menu-link">MLK JR DAY OF SERVICE</span>
         <Link
           className="nav-menu-link"
           activeClassName="nav-menu-link__active"
-          to="/coffee">
+          to="/coffeehouse">
           COFFEE HOUSE
-          </Link>
-        <span className="nav-menu-link">EVENTS & PROGRAMS</span>
-        <span className="nav-menu-link">CONTACT & LOCATION</span>
+        </Link>
+        <Link
+          className="nav-menu-link"
+          activeClassName="nav-menu-link__active"
+          to="/mlkjrday">
+          MLK JR DAY OF SERVICE
+        </Link>
       </div>
     </div>
   )

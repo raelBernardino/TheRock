@@ -17,7 +17,7 @@ const FooterComponentContainer = styled(ComponentContainer)`
 const FooterContainer = styled.div`
   width: 100%;
   font-family: 'Roboto Condensed';
-  margin: 20px 0 20px 0;
+  margin: 10px 0 10px 0;
 `
 
 const FooterHeader = styled.h1`

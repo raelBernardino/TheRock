@@ -5,7 +5,7 @@ import '../styles/nav.scss'
 import {
   Nav,
   NavScreen,
-  Landing,
+  About,
   Footer,
 } from '../components'
 import { Container } from '../components/styled'
@@ -20,7 +20,7 @@ export default () => {
     <Container style={{ overflow: `${navIsOpen ? "hidden" : ""}` }}>
       <Nav navIsOpen={navIsOpen} toggleNav={toggleNav} />
       <NavScreen navIsOpen={navIsOpen} toggleNav={toggleNav} />
-      <Landing/>
+      <About/>
       <Footer/>
     </Container>
   )

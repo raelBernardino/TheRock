@@ -1,11 +1,11 @@
-import React from "react"
+import React from 'react'
 
 import '../styles/main.scss'
 import '../styles/nav.scss'
 import {
   Nav,
   NavScreen,
-  Landing,
+  Coffee,
   Footer,
 } from '../components'
 import { Container } from '../components/styled'
@@ -20,8 +20,8 @@ export default () => {
     <Container style={{ overflow: `${navIsOpen ? "hidden" : ""}` }}>
       <Nav navIsOpen={navIsOpen} toggleNav={toggleNav} />
       <NavScreen navIsOpen={navIsOpen} toggleNav={toggleNav} />
-      <Landing/>
-      <Footer/>
+      <Coffee />
+      <Footer />
     </Container>
   )
 }
