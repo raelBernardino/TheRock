@@ -29,7 +29,7 @@ export default ({
 
   return (
     <NavContainer>
-      <Link style={{width: "20%"}} to="/#landing">
+      <Link style={{ width: "20%" }} to="/">
         <img src={logo} className="nav" alt="" />
       </Link>
       <FontAwesomeIcon

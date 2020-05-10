@@ -1,16 +1,16 @@
 import React from 'react'
 import '../styles/newsletter.scss'
 
-import { ButtonBlue, ButtonHoverBlue } from '../pages'
+import { TransparentButton } from '../components/styled'
 
 export default () => {
   const [firstName, setFirstName] = React.useState('')
   const [lastName, setLastName] = React.useState('')
   const [email, setEmail] = React.useState('')
   const [firstNameError, setFirstNameError] = React.useState({
-      msg: '',
-      completed: false
-    })
+    msg: '',
+    completed: false
+  })
   const [lastNameError, setLastNameError] = React.useState({
     msg: '',
     completed: false
@@ -29,22 +29,22 @@ export default () => {
     let nameMessage = 'Invalid name input (make sure to remove spaces and don\'t leave it blank).'
     let emailMessage = 'Invalid email.'
     if (firstTrimmedLength === 0 || firstSplitLength > 1) {
-      setFirstNameError({...firstNameError, msg: nameMessage})
+      setFirstNameError({ ...firstNameError, msg: nameMessage })
     }
     else {
-      setFirstNameError({msg: '', completed: true})
+      setFirstNameError({ msg: '', completed: true })
     }
     if (lastTrimmedLength === 0 || lastSplitLength > 1) {
-      setLastNameError({...lastNameError, msg: nameMessage})
+      setLastNameError({ ...lastNameError, msg: nameMessage })
     }
     else {
-      setLastNameError({msg: '', completed: true})
+      setLastNameError({ msg: '', completed: true })
     }
     if (!re.test(email)) {
-      setEmailError({...emailMessage, msg: emailMessage})
+      setEmailError({ ...emailMessage, msg: emailMessage })
     }
     else {
-      setEmailError({msg: '', completed: true})
+      setEmailError({ msg: '', completed: true })
     }
   }
 
@@ -61,12 +61,12 @@ export default () => {
   }
 
   const _enterKeyPress = e => {
-    if(e.key === 'Enter') validation()
+    if (e.key === 'Enter') validation()
   }
 
   return (
     <div className="newsletter">
-      <div className="newsletter-content">
+      <div className="newsletter-content"> 
         <h1 className="newsletter-header">STAY UPDATED WITH US</h1>
         <form className="newsletter-form">
           <input type="text"
@@ -75,7 +75,7 @@ export default () => {
             value={firstName}
             onChange={_onChangeFirstName}
             onKeyPress={(_enterKeyPress)}
-            />
+          />
           <span className="newsletter-error-message">{firstNameError.msg}</span>
           <input type="text"
             placeholder="LAST NAME"
@@ -83,7 +83,7 @@ export default () => {
             value={lastName}
             onChange={_onChangeLastName}
             onKeyPress={(_enterKeyPress)}
-            />
+          />
           <span className="newsletter-error-message">{lastNameError.msg}</span>
           <input type="text"
             placeholder="EMAIL"
@@ -91,12 +91,12 @@ export default () => {
             value={email}
             onChange={_onChangeEmail}
             onKeyPress={(_enterKeyPress)}
-            />
+          />
           <span className="newsletter-error-message">{emailError.msg}</span>
         </form>
-        <ButtonBlue onClick={validation}>
+        <TransparentButton onClick={validation}>
           SUBSCRIBE
-        </ButtonBlue>
+        </TransparentButton>
       </div>
     </div>
   )

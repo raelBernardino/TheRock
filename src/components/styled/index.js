@@ -101,6 +101,25 @@ export const BasicText = styled.span`
   line-height: 20px;
 `
 
+export const Button = styled.button`
+  width: 125px;
+  height: 45px;
+  font-weight: 300;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 13px;
+  border: solid .5px #042033;
+  background-color: white;
+  transition: .3s;
+  margin: 10px 0 10px 0;
+  &:hover {
+    background-color: #042033;
+    color: white;
+    transition: .3s;
+    cursor: pointer;
+    outline: none;
+  }
+`
+
 export const AnchorButton = styled.a`
   width: 125px;
   height: 45px;
@@ -121,6 +140,12 @@ export const AnchorButton = styled.a`
     cursor: pointer;
     outline: none;
   }
+`
+
+export const TransparentButton = styled(Button)`
+  background: transparent;
+  color: white;
+  border-color: white;
 `
 
 export const TransparentAnchorButton = styled(AnchorButton)`

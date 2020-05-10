@@ -6,17 +6,11 @@ import {
   Nav,
   NavScreen,
   Landing,
+  Footer,
 } from '../components'
 import {
   Container
 } from '../components/styled'
-
-if (typeof window !== "undefined") {
-  require("smooth-scroll")('a[href*="#"]', {
-    speed: 1000,
-    speedAsDuration: true
-  })
-}
 
 export default () => {
   const [navIsOpen, setNavIsOpen] = React.useState(false)
@@ -28,7 +22,8 @@ export default () => {
     <Container style={{ overflow: `${navIsOpen ? "hidden" : ""}` }}>
       <Nav navIsOpen={navIsOpen} toggleNav={toggleNav} />
       <NavScreen navIsOpen={navIsOpen} toggleNav={toggleNav} />
-      <Landing />
+      <Landing/>
+      <Footer/>
     </Container>
   )
 }
