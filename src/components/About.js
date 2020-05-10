@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import rockAbout from '../assets/rockAbout2.jpg'
+import rockAbout from '../assets/rockabout2.jpg'
 import {
   ComponentContainer,
   CenteredPartiallyFilledImage,
