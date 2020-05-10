@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
   }
   &-header {
     font-size: 15px;
@@ -32,19 +32,19 @@
       font-size: 15px;
       padding: 10px 10px 10px 0;
       text-transform: uppercase;
-      font-family: 'Roboto';
+      font-family: 'Roboto Condensed';
       font-weight: 300;
       color: white;
       outline: none;
       &::placeholder {
         color: rgba(250, 250, 250, .3);
-        font-family: "Roboto";
+        font-family: "Roboto Condensed";
         font-weight: 300;
       }
     }
   }
   &-error-message {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-size: 12px;
     font-weight: 300;
     text-transform: uppercase;
