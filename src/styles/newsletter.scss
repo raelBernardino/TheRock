@@ -38,20 +38,20 @@
       padding: 10px;
       text-transform: uppercase;
       font-family: 'Roboto';
-      font-weight: 200;
+      font-weight: 300;
       color: white;
       outline: none;
       &::placeholder {
         color: rgba(250, 250, 250, .3);
         font-family: "Roboto";
-        font-weight: 200;
+        font-weight: 300;
       }
     }
   }
   &-error-message {
     font-family: 'Roboto';
     font-size: 12px;
-    font-weight: 200;
+    font-weight: 300;
     text-transform: uppercase;
     color: #D95B5B;
   }

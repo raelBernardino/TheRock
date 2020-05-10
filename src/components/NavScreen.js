@@ -23,12 +23,18 @@ export default ({ navIsOpen, toggleNav }) => {
         to="/">
             HOME
         </Link>
-        <span className="nav-menu-link">OUR STORY</span>
+        <Link
+          className="nav-menu-link"
+          activeClassName="nav-menu-link__active"
+        to="/about">
+            OUR STORY
+        </Link>
+        <span className="nav-menu-link">MLK JR DAY OF SERVICE</span>
         <Link
           className="nav-menu-link"
           activeClassName="nav-menu-link__active"
           to="/coffee">
-          OUR COFFEE
+          COFFEE HOUSE
           </Link>
         <span className="nav-menu-link">EVENTS & PROGRAMS</span>
         <span className="nav-menu-link">CONTACT & LOCATION</span>
