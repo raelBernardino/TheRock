@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 
 export const Container = styled.div`
   width: 100%;
@@ -153,6 +154,7 @@ export const AnchorButton = styled.a`
   background-color: white;
   transition: .3s;
   margin: 10px 0 10px 0;
+  color: black;
   &:hover {
     background-color: #042033;
     color: white;
@@ -169,6 +171,7 @@ export const TransparentButton = styled(Button)`
 `
 
 export const TransparentAnchorButton = styled(AnchorButton)`
+  text-decoration: none;
   background: transparent;
   color: white;
   border-color: white;
