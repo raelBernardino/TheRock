@@ -7,8 +7,15 @@ body {
   height: 100%;
 }
 
-.button-nav {
+.button-nav,
+.no-style-link {
   text-decoration: none;
+  width: 0;
+  color: #042033;
+  font-weight: 300;
+  &__active {
+    font-weight: 500;
+  }
 }
 
 .gatsby-link {

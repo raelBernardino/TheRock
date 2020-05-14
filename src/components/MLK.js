@@ -12,12 +12,19 @@ import {
   BasicText,
   BasicContentImage,
   AnchorButton,
+  HeaderLandingTextBigOne,
 } from './styled'
 import mlkimage from '../assets/mlk.jpg'
 
 const TextBottomOverlay = styled(BasicOverlay)`
-  padding-bottom: 50%;
+  padding-bottom: 350px;
   justify-content: flex-end;
+`
+
+const MLKHeaderLandingTextBigTwo = styled(HeaderLandingTextBigTwo)`
+  @media screen and (min-width: 1000px) {
+    font-size: 100px
+  }
 `
 
 export default () => {
@@ -25,8 +32,8 @@ export default () => {
     <ComponentContainer>
       <CenteredFilledImage style={{ backgroundImage: `url(${mlkimage})` }}>
         <TextBottomOverlay>
-          <HeaderLandingTextBigTwo>MARTIN LUTHER</HeaderLandingTextBigTwo>
-          <HeaderLandingTextBigTwo>KING JR.</HeaderLandingTextBigTwo>
+          <MLKHeaderLandingTextBigTwo>MARTIN LUTHER</MLKHeaderLandingTextBigTwo>
+          <MLKHeaderLandingTextBigTwo>KING JR.</MLKHeaderLandingTextBigTwo>
           <LightLandingTextBigFour>DAY OF SERVICE</LightLandingTextBigFour>
         </TextBottomOverlay>
       </CenteredFilledImage>

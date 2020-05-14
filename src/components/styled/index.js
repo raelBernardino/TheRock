@@ -22,6 +22,12 @@ export const BasicContentImage = styled.div`
   height: 200px;
   border: solid black .5px;
   margin: 25px 0 0 0;
+  @media screen and (min-width: 750px) {
+   height: 300px;
+  }
+  @media screen and (min-width: 750px) {
+   height: 450px;
+  }
 `
 
 export const CenteredFilledImage = styled.div`
@@ -46,7 +52,7 @@ export const BasicOverlay = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgba(250, 250, 250, .15);
+  background-color: rgba(0, 0, 0, .1);
   position: absolute;
   font-family: 'Roboto Condensed';
   padding: 20px;
@@ -62,6 +68,12 @@ export const HeaderLandingTextBigOne = styled.h1`
   font-weight: 900;
   font-size: 65px;
   color: white;
+  @media screen and (min-width: 750px) {
+    font-size: 100px;
+  }
+  @media screen and (min-width: 1000px) {
+    font-size: 150px;
+  }
 `
 
 export const HeaderLandingTextBigTwo = styled.h1`
@@ -69,17 +81,26 @@ export const HeaderLandingTextBigTwo = styled.h1`
   font-weight: 900;
   font-size: 40px;
   color: white;
-`
+  @media screen and (min-width: 750px) {
+    font-size: 55px;
+  }
+  `
 
 export const HeaderLandingTextBigTwoNavy = styled(HeaderLandingTextBigTwo)`
   color: #042033;
-`
+  `
 
 export const HeaderLandingTextBigThree = styled.h1`
   margin: 0;
   font-weight: 900;
   font-size: 30px;
   color: white;
+  @media screen and (min-width: 750px) {
+    font-size: 45px;
+  }
+  @media screen and (min-width: 1000px) {
+    font-size: 65px;
+  }
 `
 
 export const HeaderLandingTextBigThreeNavy = styled(HeaderLandingTextBigThree)`
@@ -102,6 +123,12 @@ export const LightLandingTextBigFour = styled(HeaderLandingTextBigThree)`
   font-weight: 300;
   font-size: 20px;
   color: white;
+  @media screen and (min-width: 750px) {
+   font-size: 30px;
+  }
+  @media screen and (min-width: 1000px) {
+    font-size: 45px;
+  }
 `
 
 export const ContentContainer = styled.div`
@@ -111,6 +138,9 @@ export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   font-family: 'Roboto Condensed', sans-serif;
+  @media screen and (min-width: 750px) {
+    padding: 40px;
+  }
 `
 
 export const BasicText = styled.span`
@@ -119,6 +149,17 @@ export const BasicText = styled.span`
   font-size: 12px;
   margin: 25px 0 25px 0;
   line-height: 20px;
+  @media screen and (min-width: 750px) {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  @media screen and (min-width: 1000px) {
+    font-size: 20px;
+    line-height: 35px;
+  }
+`
+export const BasicTextYellow = styled(BasicText)`
+  color: #FFF6CC;
 `
 
 export const Button = styled.button`
@@ -138,7 +179,17 @@ export const Button = styled.button`
     cursor: pointer;
     outline: none;
   }
-`
+  @media screen and (min-width: 750px) {
+    font-size: 15px;
+    width: 145px;
+    height: 55px;
+  }
+  @media screen and (min-width: 1000px) {
+    font-size: 20px;
+    width: 165px;
+    height: 75px;
+  }
+  `
 
 export const AnchorButton = styled.a`
   width: 125px;
@@ -161,6 +212,16 @@ export const AnchorButton = styled.a`
     cursor: pointer;
     outline: none;
   }
+  @media screen and (min-width: 750px) {
+    font-size: 15px;
+    width: 145px;
+    height: 55px;
+  }
+  @media screen and (min-width: 1000px) {
+    font-size: 20px;
+    width: 165px;
+    height: 75px;
+  }
 `
 
 export const TransparentButton = styled(Button)`
@@ -174,4 +235,37 @@ export const TransparentAnchorButton = styled(AnchorButton)`
   background: transparent;
   color: white;
   border-color: white;
+`
+
+export const BasicInputText = styled.input`
+  font-weight: 300;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 12px;
+  margin: 25px 0 25px 0;
+  line-height: 20px;
+  margin: 15px 0 15px 0;
+  width: 95%;
+  background-color: transparent;
+  border: none;
+  border-bottom: .5px solid white;
+  font-size: 15px;
+  padding: 10px 10px 10px 0;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed';
+  font-weight: 300;
+  color: white;
+  outline: none;
+  &::placeholder {
+    color: rgba(250, 250, 250, .3);
+    font-family: "Roboto Condensed";
+    font-weight: 300;
+  }
+  @media screen and (min-width: 750px) {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  @media screen and (min-width: 1000px) {
+    font-size: 20px;
+    line-height: 35px;
+  }
 `

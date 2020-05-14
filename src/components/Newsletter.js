@@ -1,7 +1,13 @@
 import React from 'react'
+import styled from 'styled-components'
+
 import '../styles/newsletter.scss'
 
-import { TransparentButton } from '../components/styled'
+import {
+  TransparentButton,
+  BasicTextYellow,
+  BasicInputText
+} from '../components/styled'
 
 export default () => {
   const [firstName, setFirstName] = React.useState('')
@@ -26,7 +32,7 @@ export default () => {
     let firstSplitLength = firstName.split(' ').length
     let lastTrimmedLength = lastName.trim().length
     let lastSplitLength = lastName.split(' ').length
-    let nameMessage = 'Invalid name input (make sure to remove spaces and don\'t leave it blank).'
+    let nameMessage = 'Invalid name BasicInputText (make sure to remove spaces and don\'t leave it blank).'
     let emailMessage = 'Invalid email.'
     if (firstTrimmedLength === 0 || firstSplitLength > 1) {
       setFirstNameError({ ...firstNameError, msg: nameMessage })
@@ -64,35 +70,37 @@ export default () => {
     if (e.key === 'Enter') validation()
   }
 
+  const ErrorText = styled(BasicTextYellow)`
+    color: red;
+    margin: 0 ;
+  `
+
   return (
     <div className="newsletter">
-      <div className="newsletter-content"> 
-        <h1 className="newsletter-header">STAY UPDATED WITH US</h1>
+      <div className="newsletter-content">
+        <BasicTextYellow>STAY UPDATED WITH US</BasicTextYellow>
         <form className="newsletter-form">
-          <input type="text"
+          <BasicInputText type="text"
             placeholder="FIRST NAME"
-            className="newsletter-form-input"
             value={firstName}
             onChange={_onChangeFirstName}
             onKeyPress={(_enterKeyPress)}
           />
-          <span className="newsletter-error-message">{firstNameError.msg}</span>
-          <input type="text"
+          <ErrorText className="newsletter-error-message">{firstNameError.msg}</ErrorText>
+          <BasicInputText type="text"
             placeholder="LAST NAME"
-            className="newsletter-form-input"
             value={lastName}
             onChange={_onChangeLastName}
             onKeyPress={(_enterKeyPress)}
           />
-          <span className="newsletter-error-message">{lastNameError.msg}</span>
-          <input type="text"
+          <ErrorText className="newsletter-error-message">{lastNameError.msg}</ErrorText>
+          <BasicInputText type="text"
             placeholder="EMAIL"
-            className="newsletter-form-input"
             value={email}
             onChange={_onChangeEmail}
             onKeyPress={(_enterKeyPress)}
           />
-          <span className="newsletter-error-message">{emailError.msg}</span>
+          <ErrorText className="newsletter-error-message">{emailError.msg}</ErrorText>
         </form>
         <TransparentButton onClick={validation}>
           SUBSCRIBE

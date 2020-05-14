@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { Link } from 'gatsby'
 
 import { Newsletter } from '../components'
 import {
@@ -26,6 +27,9 @@ const FooterHeader = styled.h1`
   font-weight: 300;
   display: flex;
   flex-direction: column;
+  @media screen and (min-width: 1000px) {
+    font-size: 25px
+  }
 `
 
 const FooterIconContainer = styled.div`
@@ -41,6 +45,12 @@ const FooterIconAnchor = styled.a`
     opacity: 1;
     transition: .3s;
   }
+  @media screen and (min-width: 750px) {
+    font-size: 20px;
+  }
+  @media screen and (min-width: 1000px) {
+    font-size: 30px
+  }
 `
 
 const FooterAnchor = styled.a`
@@ -49,11 +59,23 @@ const FooterAnchor = styled.a`
   text-decoration: underline;
   font-weight: 300;
   margin: 5px 0 5px 0;
+  @media screen and (min-width: 750px) {
+    font-size: 15px;
+  }
+  @media screen and (min-width: 1000px) {
+    font-size: 20px
+  }
 `
 
 const FooterBasicTextWhite = styled(BasicText)`
   color: white;
   margin: 5px 0 5px 0;
+  @media screen and (min-width: 750px) {
+    font-size: 17px;
+  }
+  @media screen and (min-width: 1000px) {
+    font-size: 20px
+  }
 `
 
 const FooterContainerFlex = styled(FooterContainer)`
@@ -80,10 +102,10 @@ export default () => {
         <FooterContainer>
           <FooterHeader>SOCIALS</FooterHeader>
           <FooterIconContainer>
-            <FooterIconAnchor>
+            <FooterIconAnchor href="https://www.instagram.com/rock_coffee_house/">
               <FontAwesomeIcon icon={faInstagram} />
             </FooterIconAnchor>
-            <FooterIconAnchor>
+            <FooterIconAnchor href="https://www.facebook.com/therockcommunity">
               <FontAwesomeIcon icon={faFacebook} />
             </FooterIconAnchor>
           </FooterIconContainer>
@@ -95,11 +117,25 @@ export default () => {
         </FooterContainer>
         <FooterContainerFlex>
           <FooterContainerColumn>
-            <FooterAnchor>HOME</FooterAnchor>
-            <FooterAnchor>OUR STORY</FooterAnchor>
-            <FooterAnchor>COFFEE HOUSE</FooterAnchor>
-            <FooterAnchor>MLK JR DAY OF SERVICE</FooterAnchor>
-            <FooterAnchor>GALLERY</FooterAnchor>
+            <Link to="/">
+              <FooterAnchor>HOME</FooterAnchor>
+            </Link>
+            <Link to="/about">
+              <FooterAnchor>
+                OUR STORY
+              </FooterAnchor>
+            </Link>
+            <Link to="/coffeehouse">
+              <FooterAnchor>
+                COFFEE HOUSE
+              </FooterAnchor>
+            </Link>
+            <Link to="/mlkjrday">
+              <FooterAnchor>
+                MLK JR DAY OF SERVICE
+              </FooterAnchor>
+            </Link>
+            {/* <FooterAnchor>GALLERY</FooterAnchor> */}
           </FooterContainerColumn>
           <FooterContainerColumn>
             <FooterHeader>HOURS OF OPERATION</FooterHeader>

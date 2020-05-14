@@ -18,6 +18,9 @@ import {
 const TextBottomOverlay = styled(BasicOverlay)`
   padding-bottom: 50px;
   justify-content: flex-end;
+  @media screen and (min-width: 750px) {
+    padding-bottom: 100px;
+  }
 `
 
 const AboutContentImage = styled(BasicContentImage)`
@@ -28,6 +31,9 @@ const AboutContentImage = styled(BasicContentImage)`
 
 const AboutBigHeaderTextThree = styled(HeaderLandingTextBigThreeNavy)`
   margin: 30px 0 0 0;
+  @media screen and (min-width: 750px) {
+    margin: 25px 0 0 0;
+  }
 `
 
 const AboutEventText = styled(BasicText)`
@@ -96,7 +102,7 @@ export default () => {
         {
           events.map((e, i) => (
             <>
-              <AboutBigHeaderTextThree>{e.name}</AboutBigHeaderTextThree>
+              <AboutBigHeaderTextThree style={{ margin: `${i === 0 && "5px 0 0 0"}` }}> {e.name}</AboutBigHeaderTextThree>
               <AboutEventText>{e.time}</AboutEventText>
               <AboutBasicText>{e.description}</AboutBasicText>
               <AboutContentImageSmall />

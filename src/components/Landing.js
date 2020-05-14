@@ -28,6 +28,12 @@ const LandingPageImage = styled.div`
   height: 200px;
   border: solid black .5px;
   margin: 25px 0 0 0;
+  @media screen and (min-width: 750px) {
+    height: 300px;
+  }
+  @media screen and (min-width: 750px) {
+    height: 450px;
+  }
 `
 
 const LandingPageCoffee = styled.div`
@@ -40,6 +46,10 @@ const LandingPageCoffee = styled.div`
   align-items: center;
   position: relative;
   padding: 25px;
+  box-sizing: border-box;
+  @media screen and (min-width: 750px) {
+    padding: 40px;
+  }
 `
 
 export default () => {
