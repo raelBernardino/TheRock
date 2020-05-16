@@ -1,0 +1,5 @@
+export { default as DesktopLandingIntro } from './DesktopLandingIntro'
+export { default as DesktopAboutIntro } from './DesktopAboutIntro'
+export { default as DesktopCoffeeHouse } from './DesktopCoffeeHouse'
+export { default as DesktopMLK } from './DesktopMLK'
+export { default as DesktopFooter } from './DesktopFooter'

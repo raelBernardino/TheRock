@@ -24,7 +24,7 @@ const NavContainer = styled.div`
   z-index: 3;
   box-shadow: 0 3px 3px rgba(0,0,0,.1);
   @media screen and (min-width: 1000px) {
-    height: 125px;
+    height: 75px;
   }
 `
 

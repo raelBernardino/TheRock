@@ -2,14 +2,25 @@ import React from 'react'
 import styled from 'styled-components'
 
 import '../styles/newsletter.scss'
-
+import { useWindowSize } from './hooks'
 import {
   TransparentButton,
   BasicTextYellow,
-  BasicInputText
+  BasicInputText,
+  HeaderLandingTextBigThree,
 } from '../components/styled'
 
+const ErrorText = styled(BasicTextYellow)`
+    color: red;
+    margin: 0 ;
+`
+
+const HeaderLandingTextBigThreeYellow = styled(HeaderLandingTextBigThree)`
+  color: #FFF6CC;
+`
+
 export default () => {
+  const size = useWindowSize()
   const [firstName, setFirstName] = React.useState('')
   const [lastName, setLastName] = React.useState('')
   const [email, setEmail] = React.useState('')
@@ -70,15 +81,14 @@ export default () => {
     if (e.key === 'Enter') validation()
   }
 
-  const ErrorText = styled(BasicTextYellow)`
-    color: red;
-    margin: 0 ;
-  `
-
   return (
     <div className="newsletter">
       <div className="newsletter-content">
-        <BasicTextYellow>STAY UPDATED WITH US</BasicTextYellow>
+        {
+          size.width < 1000 ?
+            <BasicTextYellow>STAY UPDATED WITH US</BasicTextYellow>
+            : <HeaderLandingTextBigThreeYellow>STAY UPDATED WITH US</HeaderLandingTextBigThreeYellow>
+        }
         <form className="newsletter-form">
           <BasicInputText type="text"
             placeholder="FIRST NAME"

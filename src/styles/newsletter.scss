@@ -11,6 +11,9 @@
     justify-content: space-between;
     align-items: flex-start;
     font-family: 'Roboto Condensed';
+    @media screen and (min-width: 1000px) {
+      width: 45%;
+    }
   }
   &-header {
     font-size: 15px;

@@ -13,10 +13,6 @@ const InlineNavLink = styled.a`
     font-size: 15px;
     line-height: 25px;
   }
-  @media screen and (min-width: 1000px) {
-    font-size: 20px;
-    line-height: 35px;
-  }
 `
 
 export default () => {
