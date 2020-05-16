@@ -91,7 +91,7 @@ export default () => {
         </BasicOverlay>
       </CenteredFilledImage>
       {
-        size.width < 1050 ?
+        size.width < 1000 ?
           <ContentContainer>
             <HeaderLandingTextBigTwoNavy>WHO WE ARE</HeaderLandingTextBigTwoNavy>
             <LandingPageImage />

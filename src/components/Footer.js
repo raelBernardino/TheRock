@@ -42,14 +42,11 @@ const FooterIconAnchor = styled.a`
   color: #FFF6CC;
   opacity: .5;
   transition: .3s;
-  margin-right: 15px;
+  margin-right: 20px;
   width: 0;
   &:hover {
     opacity: 1;
     transition: .3s;
-  }
-  @media screen and (min-width: 750px) {
-    font-size: 20px;
   }
   @media screen and (min-width: 1000px) {
     font-size: 30px;
