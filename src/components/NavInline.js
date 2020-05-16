@@ -19,16 +19,16 @@ export default () => {
   return (
     <InlineNavContainer>
       <Link to="/" className="no-style-link" activeClassName="no-style-link__active">
-        <InlineNavLink>HOME</InlineNavLink>
+        HOME
       </Link>
       <Link to="/about" className="no-style-link" activeClassName="no-style-link__active">
-        <InlineNavLink>OUR STORY</InlineNavLink>
+        OUR STORY
       </Link>
       <Link to="/coffeehouse" className="no-style-link" activeClassName="no-style-link__active">
-        <InlineNavLink>COFFEE HOUSE</InlineNavLink>
+        COFFEE HOUSE
       </Link>
       <Link to="/mlkjrday" className="no-style-link" activeClassName="no-style-link__active">
-        <InlineNavLink>MLK JR DAY</InlineNavLink>
+        MLK JR DAY
       </Link>
     </InlineNavContainer>
   )
