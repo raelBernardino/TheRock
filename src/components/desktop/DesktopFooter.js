@@ -67,24 +67,10 @@ export default ({
         <ContentContainer>
           <HeaderLandingTextBigFourYellow>NAVIGATION</HeaderLandingTextBigFourYellow>
           <FooterContainerColumn>
-            <Link to="/" className="footer-anchor">
-              <FooterAnchor>HOME</FooterAnchor>
-            </Link>
-            <Link to="/about" className="footer-anchor">
-              <FooterAnchor>
-                OUR STORY
-              </FooterAnchor>
-            </Link>
-            <Link to="/coffeehouse" className="footer-anchor">
-              <FooterAnchor>
-                COFFEE HOUSE
-              </FooterAnchor>
-            </Link>
-            <Link to="/mlkjrday" className="footer-anchor">
-              <FooterAnchor>
-                MLK JR DAY OF SERVICE
-              </FooterAnchor>
-            </Link>
+            <Link to="/" className="footer-anchor">HOME</Link>
+            <Link to="/about" className="footer-anchor">OUR STORY</Link>
+            <Link to="/coffeehouse" className="footer-anchor">COFFEE HOUSE</Link>
+            <Link to="/mlkjrday" className="footer-anchor">MLK JR DAY OF SERVICE</Link>
           </FooterContainerColumn>
         </ContentContainer>
       </FooterContentContainerRow>
