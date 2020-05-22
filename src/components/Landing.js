@@ -17,8 +17,6 @@ import {
   LightLandingTextBigFour,
   ContentContainer,
   BasicText,
-  AnchorButton,
-  TransparentAnchorButton,
 } from './styled'
 
 const LandingPageHeaderContainer = styled.div`
@@ -69,6 +67,7 @@ const DesktopLandingPageImage = styled(LandingPageImage)`
 
 export default () => {
   const size = useWindowSize()
+  console.log(size)
   return (
     <ComponentContainer>
       <CenteredFilledImage style={{ backgroundImage: `url(${landingImage})` }}>
