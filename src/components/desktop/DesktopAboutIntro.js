@@ -15,8 +15,9 @@ const AboutContentContainer = styled(ContentContainer)`
   `
 
 const AboutContentContainerRow = styled(ContentContainerRow)`
-  @media screen and (min-width: 1050px) {
+  @media screen and (min-width: 1000px) {
     padding: 40px 0 40px 0;
+    align-items: center;
   }
 `
 

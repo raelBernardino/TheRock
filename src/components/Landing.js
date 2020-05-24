@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 import { DesktopLandingIntro } from './desktop'
-import { useWindowSize } from './hooks'
 import landingImage from '../assets/rockcoffee2.jpg'
 import coffeeImage from '../assets/rockcoffee1.jpg'
 import {
@@ -65,14 +64,7 @@ const DesktopLandingPageImage = styled(LandingPageImage)`
   height: 500px;
 `
 
-export default () => {
-  const size = useWindowSize()
-  console.log(size)
-  const [windowSizeCheck, setWindowSizeCheck] = React.useState(false)
-
-  React.useEffect(() => {
-    (size.width < 1000) ? setWindowSizeCheck(!windowSizeCheck) : setWindowSizeCheck(false)
-  }, [size.width])
+export default ({ windowSizeCheck }) => {
   return (
     <ComponentContainer>
       <CenteredFilledImage style={{ backgroundImage: `url(${landingImage})` }}>

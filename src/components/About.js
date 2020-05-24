@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { useWindowSize } from './hooks'
 import { DesktopAboutIntro } from './desktop'
 import rockAbout from '../assets/rockabout2.jpg'
 import {
@@ -59,8 +58,7 @@ const AboutContentImageSmall = styled(BasicContentImage)`
   }
 `
 
-export default () => {
-  const size = useWindowSize()
+export default ({ windowSizeCheck }) => {
   const [events, setEvents] = React.useState([
     {
       name: 'AFTER SCHOOL PROGRAM',
@@ -97,7 +95,7 @@ export default () => {
         </TextBottomOverlay>
       </CenteredPartiallyFilledImage>
       {
-        size.width < 1050 ?
+        windowSizeCheck ?
           <ContentContainer>
             <HeaderLandingTextBigTwoNavy>R.O.C.K.</HeaderLandingTextBigTwoNavy>
             <BasicText>

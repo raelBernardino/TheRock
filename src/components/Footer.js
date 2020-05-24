@@ -98,10 +98,16 @@ const FooterTrademarkContainer = styled.div`
 
 export default () => {
   const size = useWindowSize()
+  const [windowSizeCheck, setWindowSizeCheck] = React.useState(false)
+
+  React.useEffect(() => {
+    (size.width < 1000) ? setWindowSizeCheck(true) : setWindowSizeCheck(false)
+  }, [size.width])
+
   return (
     <FooterComponentContainer>
       {
-        size.width < 1000 ?
+        windowSizeCheck ?
           <ContentContainer>
             <FooterContainer>
               <FooterHeader>SOCIALS</FooterHeader>

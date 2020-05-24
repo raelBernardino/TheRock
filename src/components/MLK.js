@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { useWindowSize } from './hooks'
 import {
   ComponentContainer,
   CenteredFilledImage,
@@ -22,7 +21,7 @@ import mlkimage from '../assets/mlk.jpg'
 const TextBottomOverlay = styled(BasicOverlay)`
   padding-bottom: 150px;
   justify-content: flex-end;
-  @media screen and (min-width: 1050px) {
+  @media screen and (min-width: 1000px) {
     align-items: flex-start;
     padding: 0 10% 10% 150px;
   }
@@ -34,15 +33,14 @@ const MLKHeaderLandingTextBigTwo = styled(HeaderLandingTextBigTwo)`
   }
 `
 
-export default () => {
-  const size = useWindowSize()
+export default ({ windowSizeCheck }) => {
 
   return (
     <ComponentContainer>
       <CenteredFilledImage style={{ backgroundImage: `url(${mlkimage})` }}>
         <TextBottomOverlay>
           {
-            size.width < 1000 ?
+            windowSizeCheck ?
               <>
                 <MLKHeaderLandingTextBigTwo>MARTIN LUTHER</MLKHeaderLandingTextBigTwo>
                 <MLKHeaderLandingTextBigTwo>KING JR.</MLKHeaderLandingTextBigTwo>
@@ -54,7 +52,7 @@ export default () => {
         </TextBottomOverlay>
       </CenteredFilledImage>
       {
-        size.width < 1050 ?
+        windowSizeCheck ?
           <ContentContainer>
             <HeaderLandingTextBigTwoNavy>OUR SERVICE</HeaderLandingTextBigTwoNavy>
             <BasicText>

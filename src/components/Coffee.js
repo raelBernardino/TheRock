@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { useWindowSize } from './hooks'
 import coffeeLanding from '../assets/rockcoffee3.jpg'
 import { DesktopCoffeeHouse } from './desktop'
 import {
@@ -28,13 +27,11 @@ const TextBottomOverlay = styled(BasicOverlay)`
   }
 `
 
-export default () => {
-  const size = useWindowSize()
-
+export default ({ windowSizeCheck }) => {
   return (
     <ComponentContainer>
       {
-        size.width < 1000 ?
+        windowSizeCheck ?
           <CenteredPartiallyFilledImage style={{ backgroundImage: `url(${coffeeLanding})` }}>
             <TextBottomOverlay>
               <HeaderLandingTextBigOne>THE ROCK</HeaderLandingTextBigOne>
@@ -50,7 +47,7 @@ export default () => {
           </CenteredFilledImage>
       }
       {
-        size.width < 1000 ?
+        windowSizeCheck ?
           <ContentContainer>
             <HeaderLandingTextBigTwoNavy>TURNING COFFEE INTO WATER</HeaderLandingTextBigTwoNavy>
             <BasicText>
