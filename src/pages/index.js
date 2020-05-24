@@ -13,7 +13,6 @@ import { Container } from '../components/styled'
 
 export default () => {
   const size = useWindowSize()
-  console.log(size)
   const [navIsOpen, setNavIsOpen] = React.useState(false)
   const [windowSizeCheck, setWindowSizeCheck] = React.useState(false)
 
