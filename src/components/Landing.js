@@ -71,10 +71,8 @@ export default () => {
   const [windowSizeCheck, setWindowSizeCheck] = React.useState(false)
 
   React.useEffect(() => {
-    if (size.width < 1000) {
-      setWindowSizeCheck(!windowSizeCheck)
-    }
-  }, [])
+    (size.width < 1000) ? setWindowSizeCheck(!windowSizeCheck) : setWindowSizeCheck(false)
+  }, [size.width])
   return (
     <ComponentContainer>
       <CenteredFilledImage style={{ backgroundImage: `url(${landingImage})` }}>
