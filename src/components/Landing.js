@@ -68,13 +68,20 @@ const DesktopLandingPageImage = styled(LandingPageImage)`
 export default () => {
   const size = useWindowSize()
   console.log(size)
+  const [windowSizeCheck, setWindowSizeCheck] = React.useState(false)
+
+  React.useEffect(() => {
+    if (size.width < 1000) {
+      setWindowSizeCheck(!windowSizeCheck)
+    }
+  }, [])
   return (
     <ComponentContainer>
       <CenteredFilledImage style={{ backgroundImage: `url(${landingImage})` }}>
         <BasicOverlay>
           <LandingPageHeaderContainer>
             {
-              size.width < 1000 ?
+              windowSizeCheck ?
                 <>
                   <HeaderLandingTextBigOne>THE ROCK</HeaderLandingTextBigOne>
                   <HeaderLandingTextBigThree>COMMUNITY CENTER</HeaderLandingTextBigThree>
@@ -90,7 +97,7 @@ export default () => {
         </BasicOverlay>
       </CenteredFilledImage>
       {
-        size.width < 1000 ?
+        windowSizeCheck ?
           <ContentContainer>
             <HeaderLandingTextBigTwoNavy>WHO WE ARE</HeaderLandingTextBigTwoNavy>
             <LandingPageImage />
