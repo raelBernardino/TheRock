@@ -21,14 +21,14 @@ export default () => {
       <Link to="/" className="no-style-link" activeClassName="no-style-link__active">
         HOME
       </Link>
-      <Link to="/about" className="no-style-link" activeClassName="no-style-link__active">
-        OUR STORY
+      <Link to="/communitycenter" className="no-style-link" activeClassName="no-style-link__active">
+        COMMUNITY CENTER
       </Link>
       <Link to="/coffeehouse" className="no-style-link" activeClassName="no-style-link__active">
         COFFEE HOUSE
       </Link>
-      <Link to="/mlkjrday" className="no-style-link" activeClassName="no-style-link__active">
-        MLK JR DAY
+      <Link to="/about" className="no-style-link" activeClassName="no-style-link__active">
+        OUR STORY
       </Link>
     </InlineNavContainer>
   )

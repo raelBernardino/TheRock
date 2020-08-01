@@ -49,7 +49,7 @@ const LandingPageCoffee = styled.div`
   display: flex;
   align-items: center;
   position: relative;
-  padding: 25px;
+  padding: 15px;
   box-sizing: border-box;
   @media screen and (min-width: 750px) {
     padding: 40px;

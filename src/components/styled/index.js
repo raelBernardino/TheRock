@@ -20,8 +20,9 @@ export const ComponentContainer = styled.div`
 export const BasicContentImage = styled.div`
   width: 100%;
   height: 200px;
-  border: solid black .5px;
-  margin: 25px 0 0 0;
+  margin: 25px 0 20px 0;
+  background-size: cover;
+  background-position: center;
   @media screen and (min-width: 750px) {
    height: 300px;
   }
@@ -55,7 +56,7 @@ export const BasicOverlay = styled.div`
   background-color: rgba(3, 3, 3, .1);
   position: absolute;
   font-family: 'Roboto Condensed';
-  padding: 20px;
+  padding: 15px;
   box-sizing: border-box;
 `
 
@@ -153,7 +154,7 @@ export const LightLandingTextBigFour = styled(HeaderLandingTextBigThree)`
 
 export const ContentContainer = styled.div`
   width: 100%;
-  padding: 25px;
+  padding: 15px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;

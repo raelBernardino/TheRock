@@ -90,7 +90,7 @@ const FooterContainerColumn = styled(FooterContainer)`
 
 const FooterTrademarkContainer = styled.div`
   width: 100%;
-  padding: 20px;
+  padding: 15px;
   box-sizing: border-box;
   font-family: 'Roboto Condensed';
   background-color: #031624;
@@ -141,7 +141,7 @@ export default () => {
                 <FooterBasicTextWhite>Sun 12PM - 4PM</FooterBasicTextWhite>
               </FooterContainerColumn>
             </FooterContainerFlex>
-            <Newsletter />
+            {/* <Newsletter /> */}
           </ContentContainer>
           :
           <DesktopFooter

@@ -8,13 +8,14 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 import '../styles/nav.scss'
 import logo from '../assets/rocklogo.png'
+import rcc from '../assets/rcclogo.png'
 import { NavInline } from './index'
 
 const NavContainer = styled.div`
   width: 100%;
   height: 75px;
   background-color: white;
-  padding: 25px;
+  padding: 15px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -33,9 +34,14 @@ export default ({ toggleNav }) => {
 
   return (
     <NavContainer>
-      <Link className="nav-logo-anchor" to="/">
-        <img src={logo} className="nav" alt="" />
-      </Link>
+      <div className="lol">
+        <Link className="nav-rcclogo-anchor" rcclogo="/">
+          <img src={logo} className="nav" alt="" />
+        </Link>
+        {/* <Link className="nav-logo-anchor" to="/">
+          <img src={rcc} className="nav" alt="" />
+        </Link> */}
+      </div>
       {
         size.width < 1000 ?
           <FontAwesomeIcon

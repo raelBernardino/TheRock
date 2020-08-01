@@ -12,7 +12,7 @@ import {
 
 const DesktopLandingContentContainerTwo = styled(ContentContainer)`
   @media screen and (min-width: 1050px) {
-    padding: 20px;
+    padding: 15px;
   }
 `
 

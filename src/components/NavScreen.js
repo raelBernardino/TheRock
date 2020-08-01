@@ -26,8 +26,8 @@ export default ({ navIsOpen, toggleNav }) => {
         <Link
           className="nav-menu-link"
           activeClassName="nav-menu-link__active"
-          to="/about">
-          OUR STORY
+          to="/communitycenter">
+          COMMUNITY CENTER
         </Link>
         <Link
           className="nav-menu-link"
@@ -38,8 +38,8 @@ export default ({ navIsOpen, toggleNav }) => {
         <Link
           className="nav-menu-link"
           activeClassName="nav-menu-link__active"
-          to="/mlkjrday">
-          MLK JR DAY OF SERVICE
+          to="/about">
+          OUR STORY
         </Link>
       </div>
     </div>
