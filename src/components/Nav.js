@@ -28,20 +28,24 @@ const NavContainer = styled.div`
     height: 75px;
   }
 `
+const LogosContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
 
 export default ({ toggleNav }) => {
   const size = useWindowSize()
 
   return (
     <NavContainer>
-      <div className="lol">
-        <Link className="nav-rcclogo-anchor" rcclogo="/">
+      <LogosContainer>
+        <Link className="nav-rcclogo-anchor" to="/">
           <img src={logo} className="nav" alt="" />
         </Link>
-        {/* <Link className="nav-logo-anchor" to="/">
+        <Link className="nav-logo-anchor" to="/">
           <img src={rcc} className="nav" alt="" />
-        </Link> */}
-      </div>
+        </Link>
+      </LogosContainer>
       {
         size.width < 1000 ?
           <FontAwesomeIcon

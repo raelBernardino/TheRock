@@ -7,6 +7,7 @@ import {
   HeaderLandingTextBigTwoNavy,
   BasicText,
 } from '../styled'
+import zumbagroup from '../../assets/zumbagroup.jpg'
 
 const AboutContentContainer = styled(ContentContainer)`
   @media screen and (min-width: 1050px) {
@@ -37,7 +38,7 @@ export default ({
           events.map((e, i) => (
             <AboutContentContainer>
               <AboutContentContainerRow>
-              <AboutContentImageSmall />
+                <AboutContentImageSmall url={e.thumbnail} />
                 <ContentContainer>
                   <AboutBigHeaderTextThree> {e.name}</AboutBigHeaderTextThree>
                   <AboutEventText>{e.time}</AboutEventText>
@@ -47,6 +48,10 @@ export default ({
             </AboutContentContainer>
           ))
         }
+        <HeaderLandingTextBigTwoNavy>RENT OUR SPACE</HeaderLandingTextBigTwoNavy>
+        <BasicText>
+          From zumba classes, to board meetings, to churches! The ROCK community space can accomodate your group's needs. Our mirrored wall is perfect for dance classes, while our mounted projector makes group presentations and movie screenings a cinch. If you are interested, please contact Stephen Kia for pricing at stephen@therockcommunity.org.
+        </BasicText>
       </ContentContainer>
     </ContentContainer>
   )

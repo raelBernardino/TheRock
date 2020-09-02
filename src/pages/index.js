@@ -25,6 +25,12 @@ export default () => {
     setNavIsOpen(!navStatus)
   }
 
+  // React.useEffect(() => {
+  //   fetch("https://api.instagram.com/IGQVJVYm9TTmxPZAjZA4UEotOS1lOHhtLTdLSk83NEllbjA1MlN1NnJtN2c1S2N6VHBlcU5OZADYtM25fRUZAFRUlPbUNKVnBZAYWRtYVBsRTRWVEM2YkRlalZADd2VkUEpwd2h3S196U1lIZAWhiSGFRRk5KSgZDZD")
+  //   .then(data => data.json())
+  //   .then(data => console.log(data))
+  // }, [])
+
   return (
     <Container style={{ overflow: `${navIsOpen ? "hidden" : ""}` }}>
       <Nav navIsOpen={navIsOpen} toggleNav={toggleNav} />

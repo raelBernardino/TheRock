@@ -50,14 +50,14 @@ export default ({ windowSizeCheck }) => {
       {
         windowSizeCheck ?
           <ContentContainer>
-            <HeaderLandingTextBigTwoNavy>TURNING COFFEE INTO WATER</HeaderLandingTextBigTwoNavy>
+            {/* <HeaderLandingTextBigTwoNavy>THE ROCK COFFE HOUSE</HeaderLandingTextBigTwoNavy> */}
             <BasicText>
-              "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+              Attatched to our community center is our very own coffee shop. Our imported beans are locally brewed at Cafe De Leche in Highland park, just right over Townsend. We offer wifi, lots of seating, and pastries to go along your coffee. Now serving breakgast and lunch, you can see our full menu through <a href="https://www.trycaviar.com/store/rock-coffee-house-los-angeles-1074981/en-US">Caviar</a>.
             </BasicText>
-            <BasicContentImage style={{ backgroundImage: `url(${coffeeplant})` }} />
+            {/* <BasicContentImage style={{ backgroundImage: `url(${coffeeplant})` }} />
             <BasicText>
               Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-            </BasicText>
+            </BasicText> */}
           </ContentContainer>
           : <DesktopCoffeeHouse coffeeplant={coffeeplant} />
       }

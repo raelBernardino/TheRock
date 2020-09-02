@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'gatsby'
+import Iframe from 'react-iframe'
 
 import { useWindowSize } from './hooks'
 import { Newsletter } from '../components'
@@ -109,6 +110,16 @@ export default () => {
       {
         windowSizeCheck ?
           <ContentContainer>
+            {/* <Newsletter /> */}
+            <Iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d825.6277940304!2d-118.20120794898871!3d34.13326200710051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c3e3ea820f61%3A0x923120f959e088c2!2sROCK%20Coffee%20House!5e0!3m2!1sen!2sus!4v1596320814595!5m2!1sen!2sus"
+              width="100%"
+              height="250"
+              frameborder="0"
+              style="border:0;"
+              allowfullscreen=""
+              aria-hidden="false"
+              tabindex="0" />
             <FooterContainer>
               <FooterHeader>SOCIALS</FooterHeader>
               <FooterIconContainer>

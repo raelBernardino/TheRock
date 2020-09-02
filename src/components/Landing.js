@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 import { DesktopLandingIntro } from './desktop'
-import landingImage from '../assets/rockcoffee2.jpg'
+import landingImage from '../assets/rockcoffeeoutside.jpeg'
 import coffeeImage from '../assets/rockcoffee1.jpg'
 import {
   ComponentContainer,
@@ -17,6 +17,7 @@ import {
   ContentContainer,
   BasicText,
 } from './styled'
+import rockAbout from '../assets/aboutLanding.jpg'
 
 const LandingPageHeaderContainer = styled.div`
   text-align: center;
@@ -30,7 +31,6 @@ const LandingPageHeaderContainer = styled.div`
 const LandingPageImage = styled.div`
   width: 100%;
   height: 200px;
-  border: solid black .5px;
   margin: 25px 0 0 0;
   @media screen and (min-width: 750px) {
     height: 300px;
@@ -38,6 +38,10 @@ const LandingPageImage = styled.div`
   @media screen and (min-width: 1000px) {
     height: 450px;
   }
+  background-image: url(${p => p.url});
+  background-size: cover;
+  background-position: center;
+  background-position-y: 25%;
 `
 
 const LandingPageCoffee = styled.div`
@@ -90,7 +94,7 @@ export default ({ windowSizeCheck }) => {
         windowSizeCheck ?
           <ContentContainer>
             <HeaderLandingTextBigTwoNavy>WHO WE ARE</HeaderLandingTextBigTwoNavy>
-            <LandingPageImage />
+            <LandingPageImage url={rockAbout} />
             <BasicText>
               The ROCK Community works to manifest the Gospel of Jesus Christ by providing a place of hope, faithfulness, and sanctuary, available to those seeking knowledge, growth, and peace.  Formed as a collaborative through several local area churches we are led to serve our community as we believe Christ serves and loves others.  “…for they were drinking from a spiritual Rock which followed them; and the Rock was Christ” (1 Corinthians 10:4).
             </BasicText>

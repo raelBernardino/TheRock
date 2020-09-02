@@ -22,6 +22,7 @@ import mlkday from '../assets/mlkday.jpg'
 import rockschedule from '../assets/rockschedule.jpg'
 import aboutLanding from '../assets/aboutLanding.jpg'
 import zumbagroup from '../assets/zumbagroup.jpg'
+import openmic from '../assets/openmic.jpg'
 
 const TextBottomOverlay = styled(BasicOverlay)`
   padding-bottom: 150px;
@@ -71,6 +72,7 @@ const AboutContentImageSmall = styled(BasicContentImage)`
     height: 325px;
     width: 80%;
   }
+  background-image: url(${p => p.url});
 `
 
 export default ({ windowSizeCheck }) => {
@@ -91,20 +93,20 @@ export default ({ windowSizeCheck }) => {
       name: 'OPEN MIC NIGHT',
       time: 'TIME & DATE',
       description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta',
-      thumbnail: '',
+      thumbnail: openmic,
     },
-    {
-      name: 'GAME NIGHT',
-      time: 'TIME & DATE',
-      description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta',
-      thumbnail: '',
-    },
-    {
-      name: 'MOVIE NIGHTS',
-      time: 'TIME & DATE',
-      description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta',
-      thumbnail: '',
-    },
+    // {
+    //   name: 'GAME NIGHT',
+    //   time: 'TIME & DATE',
+    //   description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta',
+    //   thumbnail: '',
+    // },
+    // {
+    //   name: 'MOVIE NIGHTS',
+    //   time: 'TIME & DATE',
+    //   description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta',
+    //   thumbnail: '',
+    // },
   ])
 
   return (
@@ -130,10 +132,6 @@ export default ({ windowSizeCheck }) => {
               The ROCK Community works to manifest the Gospel of Jesus Christ by providing a place of hope, faithfulness, and sanctuary, available to those seeking knowledge, growth, and peace.  Formed as a collaborative through several local area churches we are led to serve our community as we believe Christ serves and loves others.  “…for they were drinking from a spiritual Rock which followed them; and the Rock was Christ” (1 Corinthians 10:4).
               Much of the programming in our community center, including our after school tutoring program, movie nights, game nights, and open mic nights. This is made possible through the attached coffee shop.This social enterprise subsidizes our mission so we can remain self-sustaining as a non-profit.
             </BasicText>
-            <BasicContentImage />
-            <BasicText>
-              "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-            </BasicText>
             {/* <AnchorButton>GALLERY</AnchorButton> */}
           </ContentContainer>
           : <DesktopMLK />
@@ -150,16 +148,16 @@ export default ({ windowSizeCheck }) => {
               events.map((e, i) => (
                 <>
                   <AboutBigHeaderTextThree style={{ margin: `${i === 0 && "5px 0 0 0"}` }}> {e.name}</AboutBigHeaderTextThree>
-                  <AboutEventText>{e.time}</AboutEventText>
+                  <AboutContentImageSmall url={e.thumbnail} />
+                  <AboutEventText>{e.time === "TIME & DATE" && ""}</AboutEventText>
                   <AboutBasicText>{e.description}</AboutBasicText>
-                  <AboutContentImageSmall style={{ backgroundImage: `url(${e.thumbnail})` }} />
                 </>
               ))
             }
             <HeaderLandingTextBigTwoNavy>RENT OUR SPACE</HeaderLandingTextBigTwoNavy>
-            <AboutContentImageSmall style={{ backgroundImage: `url(${zumbagroup})`, backgroundPosition: 'center' }} />
+            <AboutContentImageSmall url={zumbagroup} style={{ backgroundPosition: 'center' }} />
             <BasicText>
-              From zumba classes, to board meetings, to churches! The ROCK community space can accomodate your group's needs. Our mirrored wall is perfect for dance classes, while our mounted projector makes group presentations and movie screenings a cinch.Our space is [insert dimensions]. If you are interested, please contact Stephen Kia for pricing at
+              From zumba classes, to board meetings, to churches! The ROCK community space can accomodate your group's needs. Our mirrored wall is perfect for dance classes, while our mounted projector makes group presentations and movie screenings a cinch.Our space is [insert dimensions]. If you are interested, please contact Stephen Kia for pricing at stephen@therockcommunity.org.
             </BasicText>
           </ContentContainer>
           :

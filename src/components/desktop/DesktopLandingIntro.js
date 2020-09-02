@@ -9,16 +9,18 @@ import {
   BasicText,
   AnchorButton,
 } from '../styled'
+import rockAbout from '../../assets/aboutLanding.jpg'
 
 const DesktopLandingContentContainerTwo = styled(ContentContainer)`
   @media screen and (min-width: 1050px) {
     padding: 15px;
+    background-image: url(${p => p.url})
   }
 `
 
 export default ({ DesktopLandingPageImage }) => (
   <ContentContainerRow>
-    <DesktopLandingPageImage />
+    <DesktopLandingPageImage url={rockAbout} />
     <DesktopLandingContentContainerTwo>
       <HeaderLandingTextBigTwoNavy>WHO WE ARE</HeaderLandingTextBigTwoNavy>
       <BasicText>
