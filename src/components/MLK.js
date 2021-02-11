@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { BLOCKS } from '@contentful/rich-text-types';
 
 import {
   ComponentContainer,
@@ -12,17 +14,16 @@ import {
   ContentContainer,
   BasicText,
   BasicContentImage,
-  AnchorButton,
+  // AnchorButton,
   HeaderLandingTextBigThreeNavy
 } from './styled'
 import { DesktopAboutIntro } from './desktop'
 import { DesktopMLK } from './desktop'
 import mlkimage from '../assets/mlk.jpg'
-import mlkday from '../assets/mlkday.jpg'
+// import mlkday from '../assets/mlkday.jpg'
 import rockschedule from '../assets/rockschedule.jpg'
-import aboutLanding from '../assets/aboutLanding.jpg'
+// import aboutLanding from '../assets/aboutLanding.jpg'
 import zumbagroup from '../assets/zumbagroup.jpg'
-import openmic from '../assets/openmic.jpg'
 
 const TextBottomOverlay = styled(BasicOverlay)`
   padding-bottom: 150px;
@@ -75,40 +76,14 @@ const AboutContentImageSmall = styled(BasicContentImage)`
   background-image: url(${p => p.url});
 `
 
-export default ({ windowSizeCheck }) => {
-  const [events, setEvents] = React.useState([
-    {
-      name: 'MLK Day',
-      time: 'Martin Luther King Jr. National Holiday',
-      description: 'The ROCK has formed a longlasting partnership with Occidental College through participating in the annual MLK Day of Service. Over the years, large volunteer groups from Oxy have helped to maintain our space, and learn about the work we do. In recent years, the ROCK brought volunteers from Oxy\'s football team to support the library at Eagle Rock High School.',
-      thumbnail: mlkday,
-    },
-    {
-      name: 'FREE AFTER SCHOOL TUTORING',
-      time: 'TIME & DATE',
-      description: 'The ROCK offers completely free tutoring services in all subjects during after school hours (weekdays 3-6pm). Volunteer tutors from local colleges and universities mentor students to overcome their academic challenges.',
-      thumbnail: aboutLanding,
-    },
-    {
-      name: 'OPEN MIC NIGHT',
-      time: 'TIME & DATE',
-      description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta',
-      thumbnail: openmic,
-    },
-    // {
-    //   name: 'GAME NIGHT',
-    //   time: 'TIME & DATE',
-    //   description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta',
-    //   thumbnail: '',
-    // },
-    // {
-    //   name: 'MOVIE NIGHTS',
-    //   time: 'TIME & DATE',
-    //   description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta',
-    //   thumbnail: '',
-    // },
-  ])
+const Text = ({ children }) => <p className="event-text__mobile">{children}</p>
+const options = {
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+  },
+};
 
+export default ({ windowSizeCheck, events }) => {
   return (
     <ComponentContainer>
       <CenteredFilledImage style={{ backgroundImage: `url(${mlkimage})` }}>
@@ -145,14 +120,17 @@ export default ({ windowSizeCheck }) => {
               Due to COVID-19, our community center events are on hold until further notice.  But you can still support the ROCK through patroning the ROCK Coffee Shop.
             </BasicText>
             {
-              events.map((e, i) => (
-                <>
-                  <AboutBigHeaderTextThree style={{ margin: `${i === 0 && "5px 0 0 0"}` }}> {e.name}</AboutBigHeaderTextThree>
-                  <AboutContentImageSmall url={e.thumbnail} />
-                  <AboutEventText>{e.time === "TIME & DATE" && ""}</AboutEventText>
-                  <AboutBasicText>{e.description}</AboutBasicText>
-                </>
-              ))
+              events.map((e, i) => {
+                const { eventTitle, eventDate, eventThumbnail, eventDescription } = e.node
+                return (
+                  <>
+                    <AboutBigHeaderTextThree style={{ margin: `${i === 0 && "5px 0 0 0"}` }}> {eventTitle}</AboutBigHeaderTextThree>
+                    <AboutContentImageSmall url={eventThumbnail.fluid.src} />
+                    <AboutEventText>{eventDate}</AboutEventText>
+                    {documentToReactComponents(eventDescription.json, options)}
+                  </>
+                )
+              })
             }
             <HeaderLandingTextBigTwoNavy>RENT OUR SPACE</HeaderLandingTextBigTwoNavy>
             <AboutContentImageSmall url={zumbagroup} style={{ backgroundPosition: 'center' }} />

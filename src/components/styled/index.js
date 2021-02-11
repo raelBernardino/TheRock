@@ -23,6 +23,7 @@ export const BasicContentImage = styled.div`
   margin: 25px 0 20px 0;
   background-size: cover;
   background-position: center;
+  background-image: url(${p => p.url});
   @media screen and (min-width: 750px) {
    height: 300px;
   }
@@ -55,7 +56,7 @@ export const BasicOverlay = styled.div`
   flex-direction: column;
   background-color: rgba(3, 3, 3, .1);
   position: absolute;
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto Condensed', 'Roboto';
   padding: 15px;
   box-sizing: border-box;
 `
@@ -78,7 +79,7 @@ export const HeaderLandingTextBigOne = styled.h1`
 `
 
 export const HeaderLandingTextBigTwo = styled.h1`
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto Condensed', 'Roboto';
   margin: 0;
   font-weight: 900;
   font-size: 40px;
@@ -103,6 +104,7 @@ export const HeaderLandingTextBigThree = styled.h1`
   font-weight: 900;
   font-size: 30px;
   color: white;
+  font-family: "Roboto Condensed", "Roboto";
   @media screen and (min-width: 750px) {
     font-size: 45px;
   }
@@ -112,8 +114,8 @@ export const HeaderLandingTextBigThree = styled.h1`
 `
 
 export const HeaderLandingTextBigThreeNavy = styled(HeaderLandingTextBigThree)`
-  margin-bottom: 10px;
   color: #042033;
+  margin: ${p => p.margin};
   @media screen and (min-width: 750px) {
     font-size: 25px;
   }
@@ -158,7 +160,7 @@ export const ContentContainer = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto Condensed', 'Roboto', sans-serif;
   @media screen and (min-width: 750px) {
     padding: 40px;
   }
@@ -174,15 +176,19 @@ export const DesktopContentContainer = styled.div`
 
 export const BasicText = styled.span`
   font-weight: 300;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto Condensed', 'Roboto', sans-serif;
   font-size: 12px;
-  margin: 25px 0 25px 0;
+  margin: ${p => p.margin ? p.margin : "25px 0 25px 0"};
   line-height: 20px;
   @media screen and (min-width: 750px) {
     font-size: 15px;
     line-height: 25px;
+    width: 80%;
+    margin: ${p => p.margin ? p.margin : "25px 0 25px 0"};
   }
   @media screen and (min-width: 1000px) {
+    margin: ${p => p.margin ? p.margin : "25px 0 25px 0"};
+    width: 80%;
     font-size: 18px;
     line-height: 35px;
   }
@@ -195,7 +201,7 @@ export const Button = styled.button`
   width: 125px;
   height: 45px;
   font-weight: 300;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto Condensed', 'Roboto', sans-serif;
   font-size: 13px;
   border: solid .5px #042033;
   background-color: white;
@@ -224,7 +230,7 @@ export const AnchorButton = styled.a`
   width: 125px;
   height: 45px;
   font-weight: 300;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto Condensed', 'Roboto', sans-serif;
   font-size: 13px;
   display: flex;
   justify-content: center;
@@ -268,7 +274,7 @@ export const TransparentAnchorButton = styled(AnchorButton)`
 
 export const BasicInputText = styled.input`
   font-weight: 300;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto Condensed', 'Roboto', sans-serif;
   font-size: 12px;
   margin: 25px 0 25px 0;
   line-height: 20px;
@@ -280,13 +286,13 @@ export const BasicInputText = styled.input`
   font-size: 15px;
   padding: 10px 10px 10px 0;
   text-transform: uppercase;
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto Condensed', 'Roboto';
   font-weight: 300;
   color: white;
   outline: none;
   &::placeholder {
     color: rgba(250, 250, 250, .3);
-    font-family: "Roboto Condensed";
+    font-family: "Roboto Condensed", 'Roboto';
     font-weight: 300;
   }
   @media screen and (min-width: 750px) {

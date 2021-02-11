@@ -4,16 +4,16 @@ import { Link } from 'gatsby'
 
 const InlineNavContainer = styled.div`
 `
-const InlineNavLink = styled.a`
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 12px;
-  margin-right: 25px;
-  line-height: 20px;
-  @media screen and (min-width: 750px) {
-    font-size: 15px;
-    line-height: 25px;
-  }
-`
+// const InlineNavLink = styled.a`
+//   font-family: 'Roboto Condensed', 'Roboto', sans-serif;
+//   font-size: 12px;
+//   margin-right: 25px;
+//   line-height: 20px;
+//   @media screen and (min-width: 750px) {
+//     font-size: 15px;
+//     line-height: 25px;
+//   }
+// `
 
 export default () => {
   return (

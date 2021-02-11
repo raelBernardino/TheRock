@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'gatsby'
 import Iframe from 'react-iframe'
 
-import { Newsletter } from '../index'
 import {
   ContentContainer,
   ContentContainerRow,
@@ -80,7 +79,7 @@ export default ({
             <Link to="/" className="footer-anchor">HOME</Link>
             <Link to="/about" className="footer-anchor">OUR STORY</Link>
             <Link to="/coffeehouse" className="footer-anchor">COFFEE HOUSE</Link>
-            <Link to="/mlkjrday" className="footer-anchor">MLK JR DAY OF SERVICE</Link>
+            <Link to="/communitycenter" className="footer-anchor">MLK JR DAY OF SERVICE</Link>
           </FooterContainerColumn>
         </ContentContainer>
       </FooterContentContainerRow>

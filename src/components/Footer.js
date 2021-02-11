@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 import Iframe from 'react-iframe'
 
 import { useWindowSize } from './hooks'
-import { Newsletter } from '../components'
+// import { Newsletter } from '../components'
 import {
   ComponentContainer,
   ContentContainer,
@@ -20,7 +20,7 @@ const FooterComponentContainer = styled(ComponentContainer)`
 
 const FooterContainer = styled.div`
   width: 100%;
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto Condensed', 'Roboto';
   margin: 10px 0 10px 0;
 `
 
@@ -93,7 +93,7 @@ const FooterTrademarkContainer = styled.div`
   width: 100%;
   padding: 15px;
   box-sizing: border-box;
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto Condensed', 'Roboto';
   background-color: #031624;
 `
 
@@ -116,7 +116,7 @@ export default () => {
               width="100%"
               height="250"
               frameborder="0"
-              style="border:0;"
+              style={{ border: 0 }}
               allowfullscreen=""
               aria-hidden="false"
               tabindex="0" />
@@ -142,7 +142,7 @@ export default () => {
                 <Link to="/" className="footer-anchor">HOME</Link>
                 <Link to="/about" className="footer-anchor">OUR STORY</Link>
                 <Link to="/coffeehouse" className="footer-anchor">COFFEE HOUSE</Link>
-                <Link to="/mlkjrday" className="footer-anchor">MLK JR DAY OF SERVICE</Link>
+                <Link to="/communitycenter" className="footer-anchor">MLK JR DAY OF SERVICE</Link>
                 {/* <FooterAnchor>GALLERY</FooterAnchor> */}
               </FooterContainerColumn>
               <FooterContainerColumn>

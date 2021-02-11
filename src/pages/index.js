@@ -1,5 +1,4 @@
 import React from "react"
-
 import { useWindowSize } from '../components/hooks'
 import '../styles/main.scss'
 import '../styles/nav.scss'

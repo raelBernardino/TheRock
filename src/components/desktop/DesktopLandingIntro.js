@@ -7,7 +7,6 @@ import {
   ContentContainer,
   ContentContainerRow,
   BasicText,
-  AnchorButton,
 } from '../styled'
 import rockAbout from '../../assets/aboutLanding.jpg'
 

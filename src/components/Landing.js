@@ -21,7 +21,7 @@ import rockAbout from '../assets/aboutLanding.jpg'
 
 const LandingPageHeaderContainer = styled.div`
   text-align: center;
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto Condensed', 'Roboto';
   @media screen and (min-width: 1000px) {
     text-align: left;
     margin-right: 100px;

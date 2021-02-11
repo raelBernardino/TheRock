@@ -10,9 +10,9 @@ import {
   LightLandingTextBigFour,
   ContentContainer,
   HeaderLandingTextBigTwoNavy,
-  HeaderLandingTextBigThreeNavy,
+  // HeaderLandingTextBigThreeNavy,
   BasicText,
-  BasicContentImage
+  // BasicContentImage
 } from './styled'
 
 const TextBottomOverlay = styled(BasicOverlay)`
@@ -22,11 +22,11 @@ const TextBottomOverlay = styled(BasicOverlay)`
     padding-bottom: 100px;
   }
   `
-const AboutContentImage = styled(BasicContentImage)`
-margin: 0;
-height: 250px;
-margin-bottom: 40px;
-`
+// const AboutContentImage = styled(BasicContentImage)`
+// margin: 0;
+// height: 250px;
+// margin-bottom: 40px;
+// `
 
 export default () => {
 

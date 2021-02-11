@@ -3,8 +3,6 @@ import React from 'react'
 import {
   HeaderLandingTextBigTwoNavy,
   BasicText,
-  BasicContentImage,
-  AnchorButton,
 } from '../styled'
 import {
   DesktopContentContainer

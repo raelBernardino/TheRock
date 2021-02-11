@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    font-family: 'Roboto Condensed';
+    font-family: 'Roboto Condensed', 'Roboto';
     @media screen and (min-width: 1000px) {
       width: 45%;
     }
@@ -29,13 +29,13 @@
     &-input {
       &::placeholder {
         color: rgba(250, 250, 250, .3);
-        font-family: "Roboto Condensed";
+        font-family: "Roboto Condensed", 'Roboto';
         font-weight: 300;
       }
     }
   }
   &-error-message {
-    font-family: 'Roboto Condensed';
+    font-family: 'Roboto Condensed', 'Roboto';
     font-size: 12px;
     font-weight: 300;
     text-transform: uppercase;
