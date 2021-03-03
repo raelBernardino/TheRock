@@ -162,7 +162,10 @@ export const ContentContainer = styled.div`
   flex-direction: column;
   font-family: 'Roboto Condensed', 'Roboto', sans-serif;
   @media screen and (min-width: 750px) {
-    padding: 40px;
+    padding: 50px;
+  }
+  @media screen and (min-width: 1000px) {
+    padding: 40px 5%;
   }
 `
 
