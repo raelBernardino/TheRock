@@ -15,25 +15,27 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [
-          {
-            family: 'Roboto Condensed',
-            variants: ['300', '400', '700']
-          },
-          {
-            family: 'Roboto',
-            variants: ['300', '400', '700']
-          }
-        ]
+        fonts: {
+          google: [
+            {
+              family: `Roboto`,
+              variants: ["100", "300", "400", "500", "700", "900"]
+            },
+            {
+              family: `Roboto Condensed`,
+              variants: ["100", "300", "400", "500", "700", "900"]
+            }
+          ]
+        }
       }
     },
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: 'x1fitn5l4y04',
-        accessToken: 'f3_jGHhAoKmd8MS8GruP1UJFNmnnQZrhf4vmEpOdzYA'
+        spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
+        accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN
       }
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
