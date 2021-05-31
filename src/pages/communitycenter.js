@@ -22,19 +22,29 @@ export default ({ data }) => {
   }, [size.width])
 
   React.useEffect(() => {
-    if (data) setEvents(data.allContentfulEvent.edges.filter((e, i) => i === 0))
+    if (data) {
+      const { edges } = data.allContentfulEvent
+      let filteredEvents = [...edges]
+      filteredEvents = filteredEvents.filter((event, i, arr) => {
+        let trimmedArr = arr.slice(i+1, arr.length)
+        console.log({trimmedArr})
+        console.log({event})
+        return trimmedArr.map(e => e.node.eventTitle).indexOf(event.node.eventTitle) > -1
+      })
+      setEvents(filteredEvents)
+      // setEvents(edges.filter((event, i, arr) => (i === arr.findIndex(t => t.eventTitle === event.eventTitle))))
+    }
   }, [data])
 
   const toggleNav = () => {
     const navStatus = navIsOpen
     setNavIsOpen(!navStatus)
   }
-  console.log(events)
   return (
     <Container style={{ overflow: `${navIsOpen ? "hidden" : ""}` }}>
       <Nav navIsOpen={navIsOpen} toggleNav={toggleNav} />
       <NavScreen navIsOpen={navIsOpen} toggleNav={toggleNav} />
-      <MLK windowSizeCheck={windowSizeCheck} events={events}/>
+      <MLK windowSizeCheck={windowSizeCheck} events={events} />
       <Footer />
     </Container>
   )

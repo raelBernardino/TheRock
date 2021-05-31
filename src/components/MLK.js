@@ -68,7 +68,7 @@ const AboutBasicText = styled(BasicText)`
 const AboutContentImageSmall = styled(BasicContentImage)`
   height: 200px;
   margin-top: 5px;
-  background-position: top;
+  background-position: center;
   @media screen and (min-width: 750px) {
     height: 325px;
     width: 80%;
@@ -152,7 +152,7 @@ export default ({ windowSizeCheck, events }) => {
                 const { eventTitle, eventDate, eventThumbnail, eventDescription } = e.node
                 return (
                   <>
-                    <AboutBigHeaderTextThree style={{ margin: `${i === 0 && "5px 0 0 0"}` }}> {eventTitle}</AboutBigHeaderTextThree>
+                    <AboutBigHeaderTextThree style={{ margin: `${i === 0 && "5px 0 0 0"}` }}>{eventTitle}</AboutBigHeaderTextThree>
                     <AboutContentImageSmall url={eventThumbnail.fluid.src} />
                     <AboutEventText>{eventDate}</AboutEventText>
                     {documentToReactComponents(eventDescription.json, options)}
